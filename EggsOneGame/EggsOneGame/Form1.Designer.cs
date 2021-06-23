@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ballUpLeftFirst = new System.Windows.Forms.PictureBox();
             this.BasketM = new System.Windows.Forms.PictureBox();
             this.BasketU = new System.Windows.Forms.PictureBox();
@@ -40,6 +41,13 @@
             this.ballUpRightSecond = new System.Windows.Forms.PictureBox();
             this.ballDownRightFirst = new System.Windows.Forms.PictureBox();
             this.ballDownRightSecond = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ballUpLeftFirst)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BasketM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BasketU)).BeginInit();
@@ -185,11 +193,59 @@
             this.ballDownRightSecond.TabStop = false;
             this.ballDownRightSecond.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 4000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 2000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(358, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 58);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Промахов:\r\n\r\n";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(508, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 29);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "0";
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 2000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 2000;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // timer5
+            // 
+            this.timer5.Interval = 2000;
+            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 540);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ballDownRightSecond);
             this.Controls.Add(this.ballDownRightFirst);
             this.Controls.Add(this.ballUpRightSecond);
@@ -218,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ballDownRightFirst)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballDownRightSecond)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -235,6 +292,13 @@
         private System.Windows.Forms.PictureBox ballUpRightSecond;
         private System.Windows.Forms.PictureBox ballDownRightFirst;
         private System.Windows.Forms.PictureBox ballDownRightSecond;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Timer timer5;
     }
 }
 
